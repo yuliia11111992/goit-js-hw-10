@@ -1,7 +1,6 @@
 
-// Описаний у документації
 import iziToast from 'izitoast';
-// Додатковий імпорт стилів
+
 import 'izitoast/dist/css/iziToast.min.css';
 
 const form = document.querySelector('.form');
@@ -10,9 +9,9 @@ function delayFunction(delay, state) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (state === 'fulfilled') {
-        resolve(`Promise resolved after ${delay} milliseconds`);
+        resolve(`✅ Fulfilled promise in ${delay}ms`);
       } else {
-        reject(`Promise rejected after ${delay} milliseconds`);
+        reject(`❌ Rejected promise in ${delay}ms`);
       }
     }, delay);
   });
